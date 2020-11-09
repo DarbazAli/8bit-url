@@ -1,8 +1,18 @@
+import { BrowserRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router'
+import Home from './screens/Home'
+import Header from './components/Header.js'
+import Footer from './components/Footer.js'
+
 function App() {
   return (
-    <div>
-      <h1>8bit-URL</h1>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path='/' exact component={Home} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
