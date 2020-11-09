@@ -9,10 +9,13 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/done' component={Done} />
-      </Switch>
+      <main className='container'>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/done' component={Done} />
+        </Switch>
+      </main>
+
       <Footer />
     </BrowserRouter>
   )
