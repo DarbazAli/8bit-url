@@ -4,6 +4,7 @@ const urlSchema = mongoose.Schema({
   originalUrl: {
     type: String,
     trim: true,
+    unique: 'URL is already exist',
     required: 'URL is required',
   },
   shortUrl: {
