@@ -4,6 +4,9 @@ import helmet from 'helmet'
 import cors from 'cors'
 import compress from 'compression'
 
+// custom moduels
+import apiUrl from './routes/apiRoute.js'
+
 // initialize app
 const app = express()
 
@@ -18,6 +21,8 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.status(200).send('API is working..')
 })
+
+app.use('/', apiUrl)
 
 // export for usage
 export default app
