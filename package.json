@@ -6,12 +6,14 @@
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "dev": "nodemon backend/server.js"
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [
     "API",
     "URL",
-    "Shorterner",
+    "Shortener",
     "Express",
     "MongoDB",
     "Node",
@@ -29,5 +31,9 @@
     "mongoose": "^5.10.13",
     "shortid": "^2.2.16",
     "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
   }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const CopyForm = () => {
+const CopyForm = (props) => {
   return (
     <div className='copy-form'>
       <div className='back-link'>
@@ -9,9 +9,9 @@ const CopyForm = () => {
 
       <form>
         <h1>Paste a URL to shorten it</h1>
-        <input type='text' placeholder='Paste a link here..'></input>
+        <input type='text' defaultValue={''}></input>
         <button>Copy URL</button>
-        <p className='messge'>Original URL: {'original_url'}</p>
+        <p className='messge'>Original URL: {''}</p>
       </form>
     </div>
   )

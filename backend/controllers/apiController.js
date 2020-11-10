@@ -9,7 +9,7 @@ const create = async (req, res) => {
   const { url } = req.body
 
   // check if url is valid
-  if (!validUrl.isWebUri(url)) {
+  if (!validUrl.isUri(url)) {
     return res.status(400).json({
       error: 'Invalid url',
     })
