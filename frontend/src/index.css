@@ -57,7 +57,7 @@ footer {
 ====================================*/
 form {
   width: 90%;
-  height: 300px;
+  min-height: 300px;
   background: transparent;
   /* Note: currently only Safari supports backdrop-filter */
   backdrop-filter: blur(32.35499954223633px);
@@ -75,7 +75,7 @@ form h1 {
 }
 
 form input[type='text'] {
-  width: 80%;
+  width: 75%;
   height: 64px;
   background: #23262f;
   color: #e6e6e6;
@@ -88,13 +88,14 @@ form input[type='text'] {
 }
 
 form button {
-  width: 18%;
+  width: auto;
   height: 64px;
   border-radius: 4px;
   background: #2991dd;
   box-shadow: 0px 3px 6px rgba(41, 145, 221, 0.26);
   border: none;
   outline: none;
+  padding: 0 20px;
 
   font-weight: normal;
   font-size: 20px;
@@ -118,7 +119,6 @@ div.back-link {
   position: absolute;
   top: -40px;
   left: 40px;
-  /* margin-left: -100px; */
 }
 
 .copy-form {

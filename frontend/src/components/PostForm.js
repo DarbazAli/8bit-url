@@ -25,7 +25,7 @@ const PostForm = (props) => {
   return (
     <div className='main-form'>
       <form onSubmit={handleSubmit}>
-        <h1>Paste a URL to shorten it</h1>
+        <h1>Paste a URL to shorten</h1>
 
         <input
           onChange={(e) => setValue(e.target.value)}
