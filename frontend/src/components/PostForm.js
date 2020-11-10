@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
+import React, { useState } from 'react'
+import { withRouter, useHistory } from 'react-router-dom'
 import axios from 'axios'
-import { create } from '../url/api-url'
 
 const PostForm = (props) => {
   const [value, setValue] = useState('')
-  const [url, setUrl] = useState({})
+  const history = useHistory()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -14,11 +13,10 @@ const PostForm = (props) => {
       .post('/api/url', { url: value })
       .then((res) => {
         const { data } = res
-        setUrl(data)
-        // props.history.push({
-        //   pathname: '/done',
-        //   state: { detail: url },
-        // })
+        history.push({
+          pathname: '/done',
+          state: data,
+        })
       })
       .catch((err) => {
         console.log(err)

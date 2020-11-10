@@ -11,7 +11,7 @@ const Redirect = (props) => {
     }
 
     getUrl(url)
-  }, [])
+  }, [url])
 
   return (
     <div>
