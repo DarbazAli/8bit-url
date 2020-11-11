@@ -72,7 +72,7 @@ const redirectTo = async (req, res) => {
         error: 'Url not found',
       })
     } else {
-      res.status(200).json(shortUrl)
+      res.status(200).redirect(`${shortUrl.originalUrl}`)
     }
   } catch (err) {
     res.status(400).json({
