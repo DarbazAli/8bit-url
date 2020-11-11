@@ -4,14 +4,16 @@ import helmet from 'helmet'
 import cors from 'cors'
 import compress from 'compression'
 import path from 'path'
-import { config } from 'dotenv'
+import dotenv from 'dotenv'
 
 // custom moduels
 import apiUrl from './routes/apiRoute.js'
 
 // initialize app
 const app = express()
-config() // dotenv
+
+dotenv.config()
+
 // configer express
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
