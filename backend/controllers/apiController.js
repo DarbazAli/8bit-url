@@ -1,7 +1,7 @@
-import { generate } from 'shortid'
+import shortid from 'shortid'
 import validUrl from 'valid-url'
 import URL from '../models/url-model.js'
-
+const { generate } = shortid
 /*----------------------------------------------------
     CREATE NEW SHORT URL
 -----------------------------------------------------*/
