@@ -13,8 +13,8 @@ function App() {
       <main className='container'>
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/done' component={Done} />
-          <Route path='/:url' component={Redirect} />
+          <Route path='/:url' exact component={Redirect} />
+          <Route path='/done/copy' component={Done} />
         </Switch>
       </main>
 

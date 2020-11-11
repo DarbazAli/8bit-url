@@ -14,7 +14,7 @@ const PostForm = (props) => {
       .then((res) => {
         const { data } = res
         history.push({
-          pathname: '/done',
+          pathname: '/done/copy',
           state: data,
         })
       })

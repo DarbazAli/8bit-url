@@ -1,23 +1,19 @@
 import React, { useEffect } from 'react'
+
 import axios from 'axios'
 
 const Redirect = (props) => {
-  const url = props.match.params.url
-
+  const urlId = props.match.params.url
   useEffect(() => {
     const getUrl = async (url) => {
-      const { data } = await axios.get(`/${url}`)
-      window.location.replace(`${data.originalUrl}`)
+      const { data } = await axios.get(`/${urlId}`)
+      window.location = `${data.originalUrl}`
     }
 
-    getUrl(url)
-  }, [url])
+    getUrl(urlId)
+  }, [urlId])
 
-  return (
-    <div>
-      <h1>Redirect</h1>
-    </div>
-  )
+  return <div></div>
 }
 
 export default Redirect
