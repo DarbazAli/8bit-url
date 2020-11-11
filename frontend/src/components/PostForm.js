@@ -4,6 +4,7 @@ import axios from 'axios'
 
 const PostForm = (props) => {
   const [value, setValue] = useState('')
+  const [error, setError] = useState('')
   const history = useHistory()
 
   const handleSubmit = async (e) => {
@@ -19,7 +20,8 @@ const PostForm = (props) => {
         })
       })
       .catch((err) => {
-        console.log(err)
+        setError('Please provide a valid URL')
+        setValue('')
       })
   }
   return (
@@ -36,8 +38,8 @@ const PostForm = (props) => {
           placeholder='Paste a link here..'
         ></input>
         <button type='submit'>Shorten URL</button>
+        <p className='error'>{error}</p>
       </form>
-      <p className='error'></p>
     </div>
   )
 }
